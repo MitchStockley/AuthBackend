@@ -1,3 +1,4 @@
+import auth from "./routes/auth"
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -9,7 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/api/auth", require("./routes/auth"));
+app.use("/api/auth", auth);
+app.use('*', (req,res) => {
+    res.status(404).json({error: "not found"});
+});
 
 // Use the new URL parser and the unified topology options
 mongoose
