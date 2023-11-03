@@ -1,4 +1,4 @@
-import auth from "./routes/auth"
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/api/auth", auth);
+app.use("/", require("./routes/auth"));
 
 
 // Use the new URL parser and the unified topology options
