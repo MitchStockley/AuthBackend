@@ -14,8 +14,8 @@ app.use("/api/auth", require("./routes/auth"));
 // Use the new URL parser and the unified topology options
 mongoose
     .connect(process.env.MONGO_URI, {
-        // useNewUrlParser: true,
-        // useUnifiedTopology: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
     })
     .then(() => {
         console.log('App connected to database');
