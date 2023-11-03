@@ -4,8 +4,10 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
-
-app.use(cors());
+var corsOptions = {
+    origin: "https://silver-daffodil-41ec78.netlify.app/" //will need to be changed for netlify deploy
+};
+app.use(cors(corsOptions));
 // Body parser
 app.use(express.json());
 
