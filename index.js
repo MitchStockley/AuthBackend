@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
 
-pp.use(cors({
+app.use(cors({
     origin: 'https://guileless-brioche-374dcd.netlify.app/',
     credentials: true, // Enable cookies and authentication headers
     methods: 'GET, POST, PUT, DELETE', // Specify allowed methods
