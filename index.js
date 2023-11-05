@@ -6,7 +6,7 @@ require("dotenv").config();
 const cors = require("cors");
 
 pp.use(cors({
-    origin: 'https://creative-treacle-0a1604.netlify.app',
+    origin: 'https://guileless-brioche-374dcd.netlify.app/',
     credentials: true, // Enable cookies and authentication headers
     methods: 'GET, POST, PUT, DELETE', // Specify allowed methods
   }));
