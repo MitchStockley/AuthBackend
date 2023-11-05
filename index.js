@@ -5,7 +5,11 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
 
-app.use(cors());
+pp.use(cors({
+    origin: 'https://creative-treacle-0a1604.netlify.app',
+    credentials: true, // Enable cookies and authentication headers
+    methods: 'GET, POST, PUT, DELETE', // Specify allowed methods
+  }));
 // Body parser
 app.use(express.json());
 
